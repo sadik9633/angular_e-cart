@@ -1,0 +1,21 @@
+#d1{
+    transition: 0.5s ease-in-out;
+}
+#d1:hover{
+transform: scale(1.0.3);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.c{
+    transition:0.5s ease-in-out;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.c:hover{
+    background-color:rgba(18, 79, 20, 0.758);
+    border-radius: 25px;
+    opacity: 0.9;
+    color: white;
+    transform: scale(1.0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

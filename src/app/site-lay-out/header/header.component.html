@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="/product" style="color:rgba(18, 79, 20, 0.758);"><h1><i class="fa-solid fa-cart-arrow-down me-1"></i>TimeS Square</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/product"  style="font-weight:600; font-size: 20px;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="product/add_product" style="font-weight:600; font-size: 20px;" >Add Product</a></li>
+            </ul>
+            <ul>
+                <form class="d-flex mt-3" role="search">
+                    <input [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control me-1" type="search" placeholder="Search product" aria-label="Search">
+                    <button class="btn btn-outline-secondary me-5" type="submit">Search</button>
+                  </form>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark cartbtn" type="submit">
+                    <i style="color:rgba(18, 79, 20, 0.758);" class="fa-sharp fa-solid fa-cart-plus"></i>
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge text-white ms-1 rounded-pill " style="background-color: rgba(18, 79, 20, 0.758)">0</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="py-2" style="background-color: rgba(18, 79, 20, 0.758);">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Shop with us</h1>
+            <p class="lead fw-normal text-white-50 mb-0">We Display With Pride</p>
+        </div>
+    </div>
+</header>

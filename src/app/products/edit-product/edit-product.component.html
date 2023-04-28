@@ -1,0 +1,18 @@
+<div class="p-5 container w-50 text-center">
+    <h1>Edit Product</h1>
+    <form (ngSubmit)="updateProduct(updateProductForm)" #updateProductForm="ngForm" action="" class="bg-light container">
+        <input [(ngModel)]="pdata.id"  type="text" class="form-control mt-3 p-2" placeholder="id" name="pidn1" id="pid1">
+        <input [(ngModel)]="pdata.productName" type="text" class="form-control mt-3 p-2" placeholder="Name" name="pidn2" id="pid2">
+        <input [(ngModel)]="pdata.categoryId" type="text" class="form-control mt-3 p-2" placeholder="category Id" name="pidn3" id="pid3">
+        <input [(ngModel)]="pdata.description" type="text" class="form-control mt-3 p-2" placeholder="Description" name="pidn4" id="pid4">
+        <input [(ngModel)]="pdata.price" type="text" class="form-control mt-3 p-2" placeholder="Price" name="pidn5" id="pid5">
+        <input [(ngModel)]="pdata.isAvailiable" type="text" class="form-control mt-3 p-2"placeholder="Is Available True/false" name="pidn6" id="pid6">
+        <input [(ngModel)]="pdata.productImage" type="text" class="form-control mt-3 p-2" placeholder="Image url" name="pidn10" id="pid10">
+        <input [(ngModel)]="pdata.rating" type="text" class="form-control mt-3 p-2" placeholder="Rating" name="pidn7" id="pid7">
+        <input [(ngModel)]="pdata.review" type="text" class="form-control mt-3 p-2" placeholder="Review" name="pidn8" id="pid8">
+        <input [(ngModel)]="pdata.vendroName" type="text" class="form-control mt-3 p-2" placeholder="Vendor Name" name="pidn9" id="pid9">
+        <input [(ngModel)]="pdata.warrenty" type="text" class="form-control mt-3 p-2" placeholder="warranty" name="pidn11" id="pid11">
+        
+        <button type="submit" class="btn btn-secondary p-2 mt-3">update</button>
+    </form>
+</div>

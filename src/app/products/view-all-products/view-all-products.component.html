@@ -1,0 +1,96 @@
+<div class="container w-100 mt-2">
+    <div class="container row text-center">
+        <div class="p-3 col-sm-6 col-md-6 col-lg-3 c">
+            <a (click)="filter('')">
+                <img style="height: 200px; width: 100%;" class="w-75 rounded-circle"
+                    src="https://i.postimg.cc/DZm3CrMm/watches-lightbox-crowded-luxury-watch-260nw-1760579222.webp"
+                    alt="">
+                <h4 class="pt-2">View All</h4>
+            </a>
+        </div>
+        <div class="p-3 col-sm-6 col-md-6 col-lg-3 c">
+            <a (click)="filter(1)">
+                <img style="height: 200px; width: 100%;" class="w-75 rounded-circle"
+                    src="https://i.postimg.cc/q7D1ZJpk/bvlgari-men-376x.webp" alt="">
+                <h4 class="pt-2">Men's</h4>
+            </a>
+        </div>
+        <div class="p-3 col-sm-6 col-md-6 col-lg-3 c">
+            <a (click)="filter(2)">
+                <img style="height: 200px; width: 100%;" class="w-75 rounded-circle"
+                    src="https://i.postimg.cc/7Zv9bRWH/Sustainable-Watches-H.jpg" alt="">
+                <h4 class="pt-2">Women's</h4>
+            </a>
+        </div>
+        <div class="p-3 col-sm-6 col-md-6 col-lg-3 c">
+            <a (click)="filter(3)">
+                <img style="height: 200px; width: 100%;" class="w-75 rounded-circle"
+                    src="https://i.postimg.cc/MGbDfgZ8/kids-watches-jan102022.jpg" alt="">
+                <h4 class="pt-2">Kid's</h4>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div id="carouselExampleInterval" class="container w-75 carousel slide mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item" data-bs-interval="2500">
+            <img src="https://i.postimg.cc/d1t4m2gm/a4d96116-b287-4f1c-a904-52a6f51ce05f-CR0-0-1464-600-PT0-SX1464-V1.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2500">
+            <img src="https://i.postimg.cc/ZKtZj0Kv/315fdc5b-5a7d-422a-8b27-43726ea6a875-CR0-0-1464-600-PT0-SX1464-V1.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://i.postimg.cc/dt42QWtC/fe362565-f247-46bd-8b2d-31c49b2b2df1-CR001464600-PT0-SX1464-V1.png"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item active" data-bs-interval="2500">
+            <img src="https://i.postimg.cc/rppf5GBG/cde3588c-06a7-4115-a323-e20c5b4f3eb4-CR0-0-1464-600-PT0-SX1464-V1.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let i of filterProducts | filter:searchInput:'productName' "  class="col mb-5">
+                <div id="d1" class="card h-100">
+                    <!-- Product image-->
+                    <img style="height:250px;" class="card-img-top p-3" src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.productName}}</h5>
+                            <!-- Product price-->
+                            <p class="mt-2"><i class="fa-solid fa-indian-rupee-sign">.</i><strong
+                                    style="color: rgba(18, 79, 20, 0.758);">{{i.price}}</strong></p>
+                            <p class="mt-1" style="color:rgb(111, 201, 237);">rating <strong><i
+                                        class="fa-solid fa-star"></i>{{i.rating}}</strong></p>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-secondary mt-auto"
+                                routerLink="view_product/{{i.id}}">View
+                                Product</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

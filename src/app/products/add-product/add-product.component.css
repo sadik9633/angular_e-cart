@@ -1,0 +1,20 @@
+h1{
+    color:rgba(18, 79, 20, 0.758);
+}
+button{
+    width: 200px;
+    transition: .2s ease-in;
+    background-color:rgba(18, 79, 20, 0.758);
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: aquamarine;
+}
+form{
+    transition: .2s ease-in;
+    background-color: blueviolet;
+}
+form:hover{
+    transform: scale(1.01);
+    background-color: brown;
+}
